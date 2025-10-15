@@ -1,16 +1,27 @@
-# clean_arc
+# Environment Setup
 
-A new Flutter project.
+## Available Environments
+- **Development** - For local development
+- **Staging** - For testing and QA
+- **Production** - For live deployment
 
-## Getting Started
+## Running the App
 
-This project is a starting point for a Flutter application.
+### Using VS Code
+1. Open the Run and Debug panel (Ctrl+Shift+D)
+2. Select your environment:
+   - `Run Dev` - Development
+   - `Run Staging` - Staging  
+   - `Run Production` - Production
+3. Click Run
 
-A few resources to get you started if this is your first Flutter project:
+### Using Command Line
+```bash
+# Development
+flutter run --dart-define=ENV=development
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Staging
+flutter run --dart-define=ENV=staging
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Production  
+flutter run --dart-define=ENV=production
