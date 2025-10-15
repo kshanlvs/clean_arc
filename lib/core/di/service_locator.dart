@@ -2,9 +2,9 @@ import 'package:clean_arc/core/config/dev_config.dart';
 import 'package:clean_arc/core/config/production_config.dart';
 import 'package:clean_arc/core/config/staging_config.dart';
 
-import '../config/environment.dart';
-import '../netwrok/dio_network_client.dart';
-import '../netwrok/network_client.dart';
+import 'package:clean_arc/core/config/environment.dart';
+import 'package:clean_arc/core/netwrok/dio_network_client.dart';
+import 'package:clean_arc/core/netwrok/network_client.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;

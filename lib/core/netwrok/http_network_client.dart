@@ -1,7 +1,7 @@
 // lib/core/network/http_network_client.dart
 import 'package:http/http.dart' as http;
-import 'network_client.dart';
-import 'network_exception.dart';
+import 'package:clean_arc/core/netwrok/network_client.dart';
+import 'package:clean_arc/core/netwrok/network_exception.dart';
 
 class HttpNetworkClient implements NetworkClient {
   final String baseUrl;

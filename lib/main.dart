@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'core/config/environment.dart';
-import 'core/di/service_locator.dart';
+import 'package:clean_arc/core/config/environment.dart';
+import 'package:clean_arc/core/di/service_locator.dart';
 
 void main() {
   const environment =
@@ -11,10 +11,10 @@ void main() {
 
   setupDependencies(env);
 
-  final config = sl<AppConfig>();
-  print('🚀 App configured with:');
-  print('   - Environment: ${config.environment.name}');
-  print('   - Base URL: ${config.baseUrl}');
+  // final config = sl<AppConfig>();
+  // print('🚀 App configured with:');
+  // print('   - Environment: ${config.environment.name}');
+  // print('   - Base URL: ${config.baseUrl}');
   runApp(const MyApp());
 }
 

@@ -3,8 +3,8 @@ import 'package:clean_arc/feature/login/model/user_mode.dart';
 import 'package:flutter/foundation.dart';
 import 'package:mobx/mobx.dart';
 
-import '../../../core/di/service_locator.dart';
-import '../../../core/netwrok/network_exception.dart';
+import 'package:clean_arc/core/di/service_locator.dart';
+import 'package:clean_arc/core/netwrok/network_exception.dart';
 
 part 'login_view_model.g.dart';
 

@@ -1,8 +1,8 @@
 // lib/core/network/dio_network_client.dart
 import 'package:dio/dio.dart';
-import '../config/environment.dart';
-import 'network_client.dart';
-import 'network_exception.dart';
+import 'package:clean_arc/core/config/environment.dart';
+import 'package:clean_arc/core/netwrok/network_client.dart';
+import 'package:clean_arc/core/netwrok/network_exception.dart';
 
 class DioNetworkClient implements NetworkClient {
   final Dio _dio;
