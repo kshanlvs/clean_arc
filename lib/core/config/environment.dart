@@ -1,4 +1,3 @@
-
 enum Environment { development, staging, production }
 
 class AppConfig {
