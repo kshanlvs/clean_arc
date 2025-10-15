@@ -14,7 +14,8 @@ class NetworkException implements Exception {
       case DioExceptionType.receiveTimeout:
         return NetworkException('Receive timeout');
       case DioExceptionType.badResponse:
-        return NetworkException('Invalid response: ${error.response?.statusCode}');
+        return NetworkException(
+            'Invalid response: ${error.response?.statusCode}');
       case DioExceptionType.cancel:
         return NetworkException('Request was cancelled');
       default:

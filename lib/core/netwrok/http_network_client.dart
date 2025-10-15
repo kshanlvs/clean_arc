@@ -8,8 +8,10 @@ class HttpNetworkClient implements NetworkClient {
   HttpNetworkClient(this.baseUrl);
 
   @override
-  Future<dynamic> get(String path, {Map<String, dynamic>? queryParameters}) async {
-    final uri = Uri.parse('$baseUrl$path').replace(queryParameters: queryParameters);
+  Future<dynamic> get(String path,
+      {Map<String, dynamic>? queryParameters}) async {
+    final uri =
+        Uri.parse('$baseUrl$path').replace(queryParameters: queryParameters);
     final response = await http.get(uri);
     if (response.statusCode == 200) {
       return response.body;
@@ -28,13 +30,13 @@ class HttpNetworkClient implements NetworkClient {
       throw NetworkException('HTTP error: ${response.statusCode}');
     }
   }
-  
+
   @override
   Future delete(String path, {data}) {
     // TODO: implement delete
     throw UnimplementedError();
   }
-  
+
   @override
   Future put(String path, {data}) {
     // TODO: implement put

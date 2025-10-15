@@ -7,13 +7,13 @@ import '../netwrok/dio_network_client.dart';
 import '../netwrok/network_client.dart';
 import 'package:get_it/get_it.dart';
 
-
 final sl = GetIt.instance;
 void setupDependencies(Environment environment) {
   final config = _getConfigForEnvironment(environment);
-  
+
   sl.registerLazySingleton<AppConfig>(() => config);
-  sl.registerLazySingleton<NetworkClient>(() => DioNetworkClient(sl<AppConfig>()));
+  sl.registerLazySingleton<NetworkClient>(
+      () => DioNetworkClient(sl<AppConfig>()));
 }
 
 AppConfig _getConfigForEnvironment(Environment environment) {

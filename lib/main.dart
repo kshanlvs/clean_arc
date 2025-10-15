@@ -4,11 +4,11 @@ import 'core/config/environment.dart';
 import 'core/di/service_locator.dart';
 
 void main() {
+  const environment =
+      String.fromEnvironment('ENV', defaultValue: 'development');
 
-    const environment = String.fromEnvironment('ENV', defaultValue: 'development');
-  
   final env = _getEnvironmentFromString(environment);
-  
+
   setupDependencies(env);
 
   final config = sl<AppConfig>();
@@ -59,25 +59,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-       
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-  
         title: Text(widget.title),
       ),
       body: Center(
-     
         child: Column(
-   
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(

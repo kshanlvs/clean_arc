@@ -13,7 +13,6 @@ class LoginViewModel = LoginViewModelBase with _$LoginViewModel;
 abstract class LoginViewModelBase with Store {
   final NetworkClient _networkClient = sl<NetworkClient>();
 
-
   @observable
   bool isLoading = false;
 
@@ -28,7 +27,7 @@ abstract class LoginViewModelBase with Store {
     isLoading = true;
     error = null;
 
-    await Future.delayed(const Duration(seconds: 1)); 
+    await Future.delayed(const Duration(seconds: 1));
     if (email == "test@example.com" && password == "1234") {
       user = UserModel(email: email);
     } else {
@@ -37,8 +36,6 @@ abstract class LoginViewModelBase with Store {
 
     isLoading = false;
   }
-
-
 
   @observable
   String? errorMessage;
@@ -59,9 +56,9 @@ abstract class LoginViewModelBase with Store {
         data: data,
       );
 
-    if (kDebugMode) {
-      print(response);
-    }
+      if (kDebugMode) {
+        print(response);
+      }
     } on NetworkException catch (e) {
       errorMessage = e.message;
     } catch (e) {
@@ -70,5 +67,4 @@ abstract class LoginViewModelBase with Store {
       isLoading = false;
     }
   }
-
 }

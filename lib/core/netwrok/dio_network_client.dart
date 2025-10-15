@@ -25,7 +25,8 @@ class DioNetworkClient implements NetworkClient {
   }
 
   @override
-  Future<dynamic> get(String path, {Map<String, dynamic>? queryParameters}) async {
+  Future<dynamic> get(String path,
+      {Map<String, dynamic>? queryParameters}) async {
     try {
       final response = await _dio.get(path, queryParameters: queryParameters);
       return response.data;
